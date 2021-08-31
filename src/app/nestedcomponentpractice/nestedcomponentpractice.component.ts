@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class NestedcomponentpracticeComponent implements OnInit {
 
   parent2childvalue?:number;
+  child2parentvalue?:number;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  dataSent(val:number)
+  {
+    this.child2parentvalue=val;
+  }
 }

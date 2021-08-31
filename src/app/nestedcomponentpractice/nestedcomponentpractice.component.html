@@ -1,4 +1,12 @@
+<div>Parent to Child Area!</div>
+
 <input [(ngModel)]="this.parent2childvalue" type="number">
 <div>
-    <app-datapass [parent2child]="this.parent2childvalue"></app-datapass>
+    <app-datapass [parent2child]="this.parent2childvalue" (dataSent)="this.dataSent($event)"></app-datapass>
+</div>
+
+<div>Child to parent Area!</div>
+
+<div>
+    The data being passed from child to parent is {{this.child2parentvalue}}
 </div>

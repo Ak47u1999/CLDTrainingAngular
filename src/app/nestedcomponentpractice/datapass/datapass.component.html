@@ -1,3 +1,10 @@
+<div>Parent to Child Area!</div>
+
 <div>
     The data being passed from parent to child is {{this.parent2child}}
 </div>
+
+<div>Child to parent Area!</div>
+
+<input placeholder="Value to send from Child to parent" type="number" [(ngModel)]="this.child2parentval">
+<button type="button" (click)="this.child2parent()">Pass</button>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-datapass',
@@ -8,6 +8,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DatapassComponent implements OnInit {
 
   @Input() parent2child?:number;
+
+  child2parentval:number = 0;
+  @Output() dataSent: EventEmitter<number>=new EventEmitter<number>();
+
+  child2parent() : void
+  {
+    this.dataSent.emit(this.child2parentval);
+  }
 
   constructor() { }
 

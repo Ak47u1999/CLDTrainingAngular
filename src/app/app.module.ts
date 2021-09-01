@@ -7,6 +7,8 @@ import { RouteingandpipesComponent } from './routeingandpipes/routeingandpipes.c
 import { ServicesandDIComponent } from './servicesand-di/servicesand-di.component';
 import { NestedcomponentpracticeComponent } from './nestedcomponentpractice/nestedcomponentpractice.component';
 import { DatapassComponent } from './nestedcomponentpractice/datapass/datapass.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HTTPComponent } from './http/http.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +17,10 @@ import { DatapassComponent } from './nestedcomponentpractice/datapass/datapass.c
     ServicesandDIComponent,
     NestedcomponentpracticeComponent,
     DatapassComponent,
+    HTTPComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule
